@@ -50,7 +50,6 @@ echo $statusMsg;
 <?php 
 // Include the database configuration file  
 
- 
 // Get image data from database 
 $result = $db->query("SELECT image FROM images ORDER BY uploaded DESC"); 
 ?>
@@ -64,3 +63,22 @@ $result = $db->query("SELECT image FROM images ORDER BY uploaded DESC");
 <?php }else{ ?> 
     <p class="status error">Image(s) not found...</p> 
 <?php } ?>
+ 
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title></title>
+     <style type="text/css">
+          .btn {
+            padding: 8px;
+            margin:15px;
+          }
+
+     </style>
+    
+ </head>
+ <body>
+    <a href="index.php" ><button class="btn">Home</button></a>
+ 
+ </body>
+ </html>

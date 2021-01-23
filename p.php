@@ -22,14 +22,80 @@ require_Once 'config.php';
 <head>
 	<title></title>
 	<style type="text/css">
-		@media screen, print{
-          body {
+		@media screen{
+      body {
                 width: 838px;
-                height: 900px;
+                height: 1000px;
                 padding:30px;
                 font-family: sans-serif;
                 margin: auto;
                 border: 1px solid black;
+        
+            }
+            ul{
+         display: inline-block;
+         list-style-type: none;
+         float: left;
+         }
+         li{
+          list-style-type: none;
+         }
+         img {
+         height: 80px;
+         }
+         .hospital{
+          color: #045DA7;
+         }
+         .id{
+          width: 35px;
+         }
+         .topline{
+          margin-top: 10px;
+          border-bottom: 3px solid #045DA7;
+          
+         }
+         .left
+         {
+          margin-top: 20px;
+          width: 30%;
+          height: 70%;
+          border-right: 3px solid #045DA7;
+  
+         }
+         .right{
+          width: 60%;
+          height: 80%;
+         }
+         
+          .sig{
+            margin-left: 20px;
+          }
+          .sigLine{
+            background-color:  #045DA7;
+            height: 1px;
+            width: 60%;
+            margin-top: 30px;
+
+
+          }
+          .footer{
+            margin-top: 760px;
+          }
+          .btn {
+            padding: 8px;
+            margin:15px;
+            margin-top: 50px;
+          }
+
+      }
+      @media  print{
+          body {
+                width: 838px;
+                height: 1000px;
+                padding:30px;
+                font-family: sans-serif;
+                margin: auto;
+                
         
             }
             ul{
@@ -50,9 +116,8 @@ require_Once 'config.php';
          	width: 35px;
          }
          .topline{
-         	margin-top: 10px;
-         	background-color: #045DA7;
-         	height: 3px;
+          margin-top: 10px;
+          border-bottom: 3px solid #045DA7; 
          }
          .left
          {
@@ -67,7 +132,7 @@ require_Once 'config.php';
          	height: 80%;
          }
          .id_section{
-         		display: hidden;
+         		display: none;
          	}
          	.sig{
          		margin-left: 20px;
@@ -81,8 +146,11 @@ require_Once 'config.php';
 
          	}
          	.footer{
-         		margin-top: 660px;
+         		margin-top: 760px;
          	}
+          .btn{
+            display: none;
+          }
      }
        
 	</style>
@@ -128,8 +196,10 @@ require_Once 'config.php';
 	<div class="topline"> </div>
  
  	<ul class="left"> <li class="footer">
+    <div class="sigLine"></div>
+    <br>
 		<i class="sig"><b> signature</b> </i> 
-		<div class="sigLine"></div>
+		
 	</li></ul>
 	<ul class="right">
 		
@@ -138,5 +208,6 @@ require_Once 'config.php';
 	
 
 </body>
-<!-- <button onclick="window.print()"> print</button> -->
+<a href="index.php" ><button class="btn">Home</button></a>
+<button onclick="window.print()" class="btn"> print</button>
 </html>
